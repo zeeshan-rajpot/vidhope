@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+a{
+	text-decoration: none;
+}
+.section {
+  padding: rem 0;
+  background-color: #323b4a;
+  
+}
+.main-hero{
+	background-color: #323b4a;
+}
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: 1fr 1fr; */
+}
+/* ===========================================
+navbar Section Start
+======================================= */
+nav{
+  background-color: #323b4a;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  
+  text-transform: uppercase;
+  text-decoration: none;
+}
+label img {
+	width: 50px;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:#323b4a ;
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 17px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #2596BE ;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/* ===========================================
+hero Section Start
+======================================= */
+
+.section-hero {
+  background-color: var(--bg);
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  /* align-items: flex-start; */
+}
+
+.hero-top-data {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--helper);
+}
+
+.hero-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6.4rem;
+}
+
+
+.hero-para {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 60rem;
+}
+
+.section-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+picture {
+  text-align: center;
+}
+
+.hero-img {
+  max-width: 50rem;
+}
+#hero-heading-btn{
+	column-gap: 20px;
+	color: #2596BE;
+	border: none;
+}
+/* ===========================================
+videhope-business
+======================================= */
+.videhope-sect{
+	display: flex;
+	background-color: #323b4a;
+	justify-content: center;
+	column-gap: 10%;
+
+}
+.videhope-business{
+	display: flex;
+  flex-direction: column;
+  justify-content: center;
+	width: 40%;
+	height: auto;
+	
+	overflow: hidden;
+}
+.videhope-sect .videhope-business .videhope-business-heading{
+	font-size: 32px;
+	margin-top: 3rem;
+	color: white;
+}
+.videhope-sect .videhope-business h4{
+	font-size: 16px;
+	margin-right: 5%;
+	margin-left: 5%;
+	color: white;
+}
+.videhope-sect .videhope-business img{
+	 max-width: 60%;;
+}
+.videhope-sect .videhope-right{
+	float: right;
+	text-align: center;
+}
+.videhope-sect .videhope-right img{
+	 max-width: 60%;
+}
+
+.videhope-right{
+	text-align: center;
+	width: 40%;
+	height: auto;
+	
+	overflow: hidden;
+}
+.videhope-right img{
+	width: 1000px;
+}
+.videhope-right .videhope-business-heading{
+	font-size: 32px;
+	margin-top: 3rem;
+	color: white;
+}
+.videhope-sect .videhope-right h4{
+	font-size: 16px;
+	margin-right: 5%;
+	margin-left: 5%;
+	color: white;
+}
+/* ===========================================
+features-btn
+======================================= */
+.features-btn{
+	text-align: center;
+	  background-color: #323b4a;
+
+	
+}
+.features-btn a button{
+	font-size: 17px;
+  padding: 7px 13px;
+  color: #2596BE;
+  border: 1px solid #2596BE;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius:20px ;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+ 
+}
+/* ===========================================
+footer
+======================================= */
+
+
+footer {
+  width: 100wh;
+  height: auto;
+  display: flex;
+  line-height: 30px;
+  justify-content: space-around;
+  background-color: white;
+}
+.footer h3{
+	font-size: 20px;
+		font-weight: bold;
+
+}
+
+
+.footer {
+  margin-top: 40px;
+}
+.span{
+  display: none;
+}
+
+.policy {
+  width: 100wh;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  
+  color: #2596BE;
+  font-size: 10px;
+}
+.footer h5 a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+/* ===========================================
+media- querys
+======================================= */
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 700px) {
+
+.hero-heading{
+  font-size: 20px;
+}
+.section-hero-image {
+	display: block;
+}
+
+
+}

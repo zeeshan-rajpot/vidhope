@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img</title>
+</head>
+<body>
+    <div class="container">
+<input type="file" id="image1">
+<input type="text" id="textt">
+<button type="submit" onclick="apply()"> submit</button>
+
+    </div>
+<script>
+function apply() {
+
+const formData = new FormData();
+ 
+
+
+      const fileField = document.querySelector('input[type="file"]');
+      var image = document.getElementById("image1").value;
+      var textt = document.getElementById("textt").value;
+      // var e = document.getElementById("selectposition");
+     
+    //   console.log(value)
+      console.log(textt)
+      let reader = new FileReader() 
+  reader.readAsDataURL(fileField.files[0])
+
+console.log(reader.result)
+      formData.append('upload', 'upload');
+      formData.append('Image',image);
+      
+      formData.append('Position', 5);
+      // formData.append('text', textt);
+      formData.append('EnglishHeading', textt);
+      formData.append('EnglishDescription', 'test 123');
+      formData.append('FrenchHeading', 'test 123');
+      formData.append('FrenchDescription', 'test 123');
+      // console.log(loadFile1)
+      // formData.append('Image', fileField.files[0]);
+    //  console.log( image)
+
+      fetch('https://videhope.azurewebsites.net/api/videohope-images/upload', {
+        method: 'POST',
+        body: formData,
+        headers:{
+'content-type':'multipart/form-data'
+},
+encType:"multipart/form-data" ,
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log('Success:', result);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+
+
+
+
+
+}
+
+</script>
+
+</body>
+</html>
